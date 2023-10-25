@@ -9,7 +9,7 @@ body{
     width: 100%;
     display: flex;
     background-color: #02013a !important;
-    z-index: 10;
+    z-index: 20;
 }
 .navbar .navbar-collapse .navbar-nav{
     display: flex !important;
