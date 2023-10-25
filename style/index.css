@@ -4,71 +4,87 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-.nav{
+.navbar{
     position: fixed;
     width: 100%;
-    background-color: #02013a;
-    font-family: 'Righteous', cursive;
-    font-size: 19px;
-    border-bottom: 2px solid #5ae90e;
+    display: flex;
+    background-color: #02013a !important;
     z-index: 10;
 }
-.nav .nav-list{
-    margin: 0;
-    list-style: none;
-    display: flex;
+.navbar .navbar-collapse .navbar-nav{
+    display: flex !important;
     justify-content: space-evenly;
+    width: 100%;
 }
-.nav .nav-list .nav-item{  
+.navbar-toggler{
+    border:2px solid #57ce17;
+}
+.navbar-toggler span{
+    color: #57ce17 !important;
+}
+.navbar .nav-item{
+    color: #57ce17 !important;
+    text-align: left;
+    width: fit-content;
     margin: auto;
-    border-bottom:3px solid #02013a;
-    padding: 5px 0px;
+    transition:all 0.5s ease-in-out ;
+    -webkit-transition:all 0.5s ease-in-out ;
+    -moz-transition:all 0.5s ease-in-out ;
+    -ms-transition:all 0.5s ease-in-out ;
+    -o-transition:all 0.5s ease-in-out ;
 }
-.nav .nav-list .nav-item .nav-link{
-    text-decoration: none;
-    color: #5ae90e;
-    padding: 20px;
-    
+.logo-nav{
+    width: 90px;
+    margin: 0 34px auto;
 }
-.nav .nav-list .nav-item:hover {
-    border-bottom:3px solid #5ae90e ;
+.navbar-brand{
+    text-align: center;
+}
+.navbar-toggler i{
+    outline: none;
+    color: #57ce17 ;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+.navbar-toggler:hover i{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.navbar .nav-item:hover,
+.active{
     letter-spacing: 1px;
-}
-.nav .nav-list .logo-nav{
-    width:70px;
-    margin: 0;
-    padding: 5px;
-
+    font-weight: 500;
 }
 .image img{
-    margin-top:50px ;
     width:100% ;
+    margin-top: 5%;
 }
 .lang {
-    margin-top: -5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     position: relative;
     border-top: #32770c 3px solid;
-    display: flex;
     justify-content: space-evenly;
     background-color: #57ce17;
-}
-.lang div{
-    margin: 10px;
 }
 .lang div h1{
     background-color: #3d990b;
     color: white;
     font-family: 'Abril Fatface', cursive;
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 150%;
     border: 3px solid white;
     border-radius: 15px;
     width: fit-content;
-    margin: auto ;
+    margin: 20px  auto ;
     padding: 10px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -77,15 +93,16 @@ body{
     
 }
 .lang .prog-lang{
+    margin: 20px;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
 }
 .lang .prog-lang div{
     position: relative;
+    width: 32%;
     color: white;
-    width: 100%;
-    height: 100%;
-    font-size: 30px;
+    font-size: 125%;
     font-family: 'Righteous', cursive;
     border-radius: 15px;
     border: 3px solid white;
@@ -99,18 +116,21 @@ body{
 .lang .prog-lang div img{
     position: relative;
     width: 100%;
-    margin-bottom: -8px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
-
-table ,tr,td{
-    border: solid 3px #02013a;
-    
-    
+#adobe{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+table tr td div:first-child{
+    width: 98%;
+    margin: 5px auto
 }
 table thead tr th{
     letter-spacing: 1px;
@@ -119,66 +139,94 @@ table thead tr th{
     font-size: 40px;
     font-family: 'Bebas Neue', cursive;
     padding: 10px;
-
+    text-align: center;
 }
 table tr td p{
     color:#02013a;
     text-align: center;
-    font-size: x-large;
+    font-size: 150%;
+    margin-top: 1rem;
 }
-table tr td{
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+td div{
+    border: 2px solid #02013a;
+    padding: 1.5% 0.25%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
-table tr td img {
+table tr td div img {
     width: 100%;
-    height: 300px;
     margin-bottom:-4px ;
-    border-radius: 0  0 20px 20px;
-    -webkit-border-radius: 0  0 20px 20px;
-    -moz-border-radius: 0  0 20px 20px;
-    -ms-border-radius: 0  0 20px 20px;
-    -o-border-radius: 0  0 20px 20px;
+    border-radius: 0  0 23px 23px;
+    -webkit-border-radius: 0  0 23px 23px;
+    -moz-border-radius: 0  0 23px 23px;
+    -ms-border-radius: 0  0 23px 23px;
+    -o-border-radius: 0  0 23px 23px;
 }
 .python {
     text-align: center;
     padding: 20px;
-    border: 3px solid #31720d;
-    border-radius: 20px;
-    margin: 5px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    background-color: #eee;
+    border-radius: 25px;
+    width: 100%;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.python div .pyth i{
+    font-size: 900%;
 }
 .python div .pyth{
-    font-size: 250px;
     margin: auto;
     color: #50ca0f;
 }
 .python h1 {
     margin: 0 5px 5px 5px ;
     padding-bottom: 8px;
-    font-size: 35px;
+    font-size: 200%;
+    color:#50ca0f;
     font-family: 'Quantico', sans-serif;
 }
 .python video{
     border-radius: 25px ;
-    width: 800px;
+    width: 80%;
     -webkit-border-radius:25px;
     -moz-border-radius:25px;
     -ms-border-radius:25px;
     -o-border-radius:25px;
 }
+#register{
+    width: 95%;
+    margin: auto;
+}
+#register > div{
+    background-color: #02013a;
+    color: white;
+    font-family: 'Quantico', sans-serif;
+    text-align: center;
+    width: fit-content;
+    padding: 10px  25px;
+    margin: 15px auto;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#register > div h2{
+    margin: 0;
+}
 Form{
+    background-color: #eee;
+    box-shadow: 5px 5px 20px #090952;
     margin: 10px auto;
     text-align: center;
-    border: 3px dashed #09093f ;
+    border: 2px dashed #09093f ;
     border-radius: 30px;
-    width: fit-content;
+    width: 100%;
     padding: 10px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -189,15 +237,17 @@ Form div{
     margin: 20px;
 }
 Form div label{
-    font-size: 25px;
+    font-size: 150%;
     text-align: left;
-    width: 150px;
+    width: 100%;
     display: inline-block;
-    color:#050427;
+    color: #050427;
+    margin-bottom: 4px;
 }
 Form div .text-editor{
     padding: 5px;
-    font-size: 20px;
+    width: 100%;
+    font-size: 130%;
     border: 1px solid #02013a;
     border-radius: 25px;
     box-shadow: 1px 1px 10px #02013a;
@@ -213,23 +263,27 @@ Form div img{
     padding: 20px;
 }
 Form div .submit{
-    background-color: #110f58;
+    background-image:linear-gradient(to right,#1d1993,#02013a);
     color: white;
     padding: 8px 10px;
     margin: 15px;
     font-size: 18px;
     font-family: 'Righteous', cursive;
-    border: 3px solid #050427;
     border-radius: 15px;
+    border: none;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 Form div .submit:hover{
     cursor: pointer;
-    color: #050427;
-    background-color: white;
+    background-image:linear-gradient(to left,#1d1993,#02013a);
 }
 footer{
     display: flex;
@@ -244,17 +298,18 @@ footer{
     padding:5px;
     margin:0px;
 }
-.Footer ul{
+.Footer ul div{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding:0 ;
 }
-.Footer ul li{
+.Footer ul div li{
     list-style: none;
     text-align: center;
     color:white;
 }
-.Footer ul li a i{
+.Footer ul div li a i{
     text-align: center;
     border: 1px white solid;
     padding: 5px;
@@ -300,27 +355,81 @@ footer{
     background: white;
 }
 .font{
-    font-size: xx-large;
+    font-size: 100%;
     margin: 10px;
 }
 footer .bottom-footer{
     text-align: center;
     background-color:#02013a;
     color: white;
-    padding: 1px;
-    font-size: medium;
+    font-size: 120%;
     font-family: 'Chakra Petch', sans-serif;
 }
+footer .bottom-footer p{
+    margin: 0;
+    padding: 8px;
+} 
 footer .Footer img{
     width: 150px;
     padding: 20px;
 }
-footer .Footer ul li a{
+footer .Footer ul div li{
+    width:150px;
+}
+footer .Footer ul div li a{
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 150%;
     font-family: 'Arima Madurai', cursive;
 }
-footer .Footer ul li a:hover {
+footer .Footer ul div li a:hover {
     text-decoration: underline;
+}
+.btn-top{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    bottom: 15px;
+    background-image: linear-gradient(to top,#9cf06f,#57ce17);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 10;
+    text-align: center;
+}
+.btn-top a i{
+    font-size: 302%;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.btn-top a:hover i{
+    font-size: 312%;
+    
+}
+@media (max-width:680px){
+    .lang .prog-lang{
+        flex-direction: column;
+        
+    }
+    .lang .prog-lang div{
+        width: 100%;
+        margin-top: 20px;
+    }
+    table tr {
+    display: flex;
+    flex-direction: column;
+    }
+    td div{
+        padding: 1% 0.25%;
+    }
+    .python div .pyth i{
+    font-size: 300%;
+}
 }
