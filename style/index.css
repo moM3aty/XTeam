@@ -63,8 +63,10 @@ body{
 }
 .image img{
     width:100% ;
-    margin-top: 5%;
+    margin-top:55px;
+    z-index: 19;
 }
+
 .lang {
     display: flex;
     flex-direction: column;
